@@ -3,10 +3,10 @@ MANDIR   := ${PREFIX}/share/man/man1
 BINDIR   := ${PREFIX}/bin
 
 NAME     := setroot
-CC       := gcc
+CC       := cc
 OFLAG    :=
 CFLAGS   := -std=c99 -Wall -g -Wextra ${OFLAG}
-LIBS     := -lX11 `imlib2-config --libs`
+LIBS     := -I /usr/X11R6/include/ -I /usr/local/include/ -lX11 `imlib2-config --libs`
 
 SRC      := setroot.c
 
